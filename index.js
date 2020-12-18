@@ -22,6 +22,8 @@ mongoose.connect(
   }
 );
 
+app.use(express.static('./client/build'));
+
 app.use("/users", require("./routes/userRouter"));
 app.use("/budget", require("./routes/userBudgetRouter"));
 app.use("/expense", require("./routes/userExpenseRouter"));
